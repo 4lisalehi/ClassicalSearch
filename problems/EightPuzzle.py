@@ -25,7 +25,6 @@ class EightPuzzle(Problem):
 
         self.init_state.matrix = [row1, row2, row3]
 
-        print(self.init_state.matrix)
         check = False
         for i, v in enumerate(self.init_state.matrix):
             for j, value in enumerate(v):

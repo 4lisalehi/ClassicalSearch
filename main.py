@@ -31,8 +31,6 @@ input_problem = input('Please pick one of the problems below: \n'
                       '3- Rubik Cube\n')
 
 if input_problem.lower() in p1_choices:
-
-    print('Problem inputs: ')
     rescue_robot = RescueRobot()
 
     input_algorithm = input('Please pick one of the algorithms below: \n1- Uniform Cost\n2- Graph DFS\n3- Bi-Directional\n')
@@ -52,15 +50,6 @@ if input_problem.lower() in p1_choices:
             print('Path:')
             for _node in search_info['path']:
                 print(_node.state.name, end=' -> ')
-            print('')
-            for _node in search_info['path']:
-                if _node.state.matrix is not None:
-                    for row in _node.state.matrix:
-                        for val in row:
-                            if val is not None:
-                                print(val, end=' ')
-                        print('')
-                print('')
 
     elif input_algorithm in dfs_choices:
         graph_dfs = DFS(rescue_robot, True)
@@ -78,14 +67,6 @@ if input_problem.lower() in p1_choices:
             for _node in search_info['path']:
                 print(_node.state.name, end=' -> ')
             print('')
-            for _node in search_info['path']:
-                if _node.state.matrix is not None:
-                    for row in _node.state.matrix:
-                        for val in row:
-                            if val is not None:
-                                print(val, end=' ')
-                        print('')
-                print('')
 
     elif input_algorithm in bd_choices:
         bi_directional = BiDirectional(rescue_robot, True)
@@ -102,15 +83,6 @@ if input_problem.lower() in p1_choices:
             print('Path:')
             for _node in search_info['path']:
                 print(_node.state.name, end=' -> ')
-            print('')
-            for _node in search_info['path']:
-                if _node.state.matrix is not None:
-                    for row in _node.state.matrix:
-                        for val in row:
-                            if val is not None:
-                                print(val, end=' ')
-                        print('')
-                print('')
 
     elif input_algorithm in astar_choices:
         astar = AStar(rescue_robot, True)
