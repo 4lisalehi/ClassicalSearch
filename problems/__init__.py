@@ -1,0 +1,1 @@
+from .RescueRobot import RescueRobot
